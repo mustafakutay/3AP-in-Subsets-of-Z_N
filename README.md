@@ -31,11 +31,11 @@ The repository includes implementations for the following cases:
 Each script:
 
 - Generates the quadratic residues modulo the specified modulus,
-- 
+
 - Enumerates all ordered triples to count non-trivial 3-APs via brute force,
-- 
+  
 - Calculates the number of 3-APs predicted by the corresponding formula,
-- 
+  
 - Compares both values to verify correctness.---
 
 ## 📂 Code Files
