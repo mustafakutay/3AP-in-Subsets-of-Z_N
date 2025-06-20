@@ -42,13 +42,9 @@ This repository contains the following scripts:
 | File Name                   | Description |
 |----------------------------|-------------|
 | 3AP_counter_S2^k.py`       | The code verifies the correctness of Theorem 1.3, which gives a closed formula for the number of non-trivial three-term arithmetic progressions in \( S_{2^k} \), depending on whether \( k \) is odd or even. It computes the actual number of such progressions by brute-force enumeration of all ordered triples in \( S_{2^k} \) that satisfy the arithmetic progression condition modulo \( 2^k \), and compares this count with the value predicted by the corresponding formula. |
-
 | 3AP_counter_Sp^2.py`       | The code verifies the correctness of several exact formulas for the number of non-trivial three-term arithmetic progressions in \( S_{p^2} \), where the formula used depends on the congruence class of the odd prime \( p \) modulo 8. For each such prime, the code computes the actual number of 3-term arithmetic progressions in \( S_{p^2} \) via brute-force and compares it with the corresponding theoretical value.|
-
 | 3AP_counter_Sp^3.py`       | This code tests explicit formulas for the number of non-trivial three-term arithmetic progressions in \( S_{p^3} \), where the formula to be applied depends on the congruence class of the odd prime \( p \) modulo 8. It computes the set of quadratic residues modulo \( p^3 \), counts all valid arithmetic progressions via brute-force, and verifies that this count agrees with the predicted value from the formula.|
-
 | 3AP_counter_Sp^4.py`       | This code confirms the accuracy of exact formulas for the number of non-trivial 3-term arithmetic progressions in \( S_{p^4} \), with the formula selected based on the value of \( p \mod 8 \), where \( p \) is an odd prime. It computes the set of quadratic residues modulo \( p^3 \), counts all valid arithmetic progressions via brute-force, and verifies that this count agrees with the predicted value from the formula.|
-
 | 3AP_counter_Sp^k.py`       | The code verifies the correctness of Theorem 1.2, which provides a formula for the number of non-trivial three-term arithmetic progressions in \( S_{p^k} \), depending on whether \( k \) is odd or even. It computes the exact number of such progressions by exhaustively checking all ordered triples in \( S_{p^k} \) that satisfy the arithmetic progression condition modulo \( p^k \), and then compares this empirical count with the value predicted by the theorem’s formula. |
 
 ---
