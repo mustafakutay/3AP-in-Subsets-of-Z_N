@@ -36,7 +36,7 @@ Each script:
   
 - Calculates the number of 3-APs predicted by the corresponding formula,
   
-- Compares both values to verify correctness.---
+- Compares both values to verify correctness.
 
 ## 📂 Code Files
 
