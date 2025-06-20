@@ -8,7 +8,7 @@ This repository contains the Python source codes developed for the computations 
 > *Year: 2025*
 
 
-# Verification of 3-Term Arithmetic Progression Counts in Quadratic Residues Modulo \( p^k \)
+Verification of 3-Term Arithmetic Progression Counts in Quadratic Residues Modulo \( p^k \)
 
 There are Python implementations that verify explicit formulas for counting non-trivial three-term arithmetic progressions (3-APs) within sets of quadratic residues modulo powers of primes. These codes correspond to different theorems and formulas depending on the modulus and the prime's residue class.
 
@@ -31,8 +31,11 @@ The repository includes implementations for the following cases:
 Each script:
 
 - Generates the quadratic residues modulo the specified modulus,
+- 
 - Enumerates all ordered triples to count non-trivial 3-APs via brute force,
+- 
 - Calculates the number of 3-APs predicted by the corresponding formula,
+- 
 - Compares both values to verify correctness.---
 
 ## 📂 Code Files
@@ -49,15 +52,16 @@ This repository contains the following scripts:
 
 ---
 
-## How to Run
+## ▶️ How to Run the Code
 Make sure you have Python 3.x installed. Most codes require only standard libraries; some may need:
 
 sympy (for number theory and modular arithmetic)
+
 numpy (for arrays and numeric handling)
 
 
 
-## Example Output for "3AP_counter_Sp^k"
+## 📌  Example Output for "3AP_counter_Sp^k"
 
 ------ p = 5, k = 2, mod = 25 ------
 
