@@ -1,0 +1,67 @@
+#!/usr/bin/env python
+# coding: utf-8
+
+# In[2]:
+
+
+def quadratic_residues(p, power=3):
+    """Returns the list of quadratic residues modulo p^power."""
+    mod = p ** power
+    return sorted(set((x * x) % mod for x in range(mod)))
+
+def brute_force_3AP_count(S, mod):
+    """
+    This counts the number of 3-term arithmetic progressions among ordered triples (x,y,z) in a given set S, 
+    where each triple is counted individually. The element x,y,z must be distinct and satisfy 
+    the condition of forming an arithmetic progression.
+    
+    """
+    count = 0
+    n = len(S)
+    for i in range(n):
+        for j in range(n):
+            if j == i:
+                continue
+            for k in range(n):
+                if k == i or k == j:
+                    continue
+                x, y, z = S[i], S[j], S[k]
+                if (y - x) % mod == (z - y) % mod:
+                    count += 1
+    return count
+
+def formula_3ap_S_p3(p):
+    """Returns formula-based 3-AP count in S_{p^3}, depending on p mod 8."""
+    if p % 8 == 1:
+        return (p**6 - 6*p**5 + 11*p**4 - 4*p**3 - p**2 + 2*p - 3) // 8
+    elif p % 8 == 3:
+        return ((p - 1) * (p**5 + p**4 - 4*p**2 + p - 3)) // 8
+    elif p % 8 == 5:
+        return ((p - 1)**2 * (p**2 + 1)**2) // 8
+    elif p % 8 == 7:
+        return ((p - 1) * (p**5 - 3*p**4 + 4*p**3 + p + 1)) // 8
+    else:
+        return None  # p should be odd prime
+
+def analyze_p_cubed(p):
+    mod = p ** 3
+    S = quadratic_residues(p, power=3)
+    brute = brute_force_3AP_count(S, mod)
+    formula = formula_3ap_S_p3(p)
+    print(f"---- p = {p}, mod = {mod} ----")
+    print(f"S_{mod} (quadratic residues): {S}")
+    print(f"Actual 3-AP count (brute force): {brute}")
+    print(f"Value derived from the formula:      {formula}")
+    print(f"Difference: {abs(brute - formula)}")
+    print(f"Consistency Check: {'✅' if brute == formula else '❌'}\n")
+
+# Sample tests (note that computations may take longer for larger values of p)
+for p in [3, 5, 7, 11, 13]:  # This value may be increased if required
+    analyze_p_cubed(p)
+
+
+# In[ ]:
+
+
+
+
