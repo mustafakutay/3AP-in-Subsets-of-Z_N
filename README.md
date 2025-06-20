@@ -60,9 +60,13 @@ numpy (for arrays and numeric handling)
 ## Example Output for "3AP_counter_Sp^k"
 
 ------ p = 5, k = 2, mod = 25 ------
+
 S_25 (quadratic residues): [0, 1, 4, 6, 9, 11, 14, 16, 19, 21, 24]
+
 Actual 3-AP count (brute force): 50
+
 Value derived from the formula: 50.0
+
 Difference = |50 - 50.0| = 0.0
 
 --
